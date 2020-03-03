@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+<meta name="author" content="Laura" />
+
+
+<title>Mortality of pregnants and newborns - Research</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/united.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<script src="site_libs/navigation-1.1/codefolding.js"></script>
+<script src="site_libs/kePrint-0.0.1/kePrint.js"></script>
+
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css" data-origin="pandoc">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  { background-color: #f8f8f8; }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ef2929; } /* Alert */
+code span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #c4a000; } /* Attribute */
+code span.bn { color: #0000cf; } /* BaseN */
+code span.cf { color: #204a87; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4e9a06; } /* Char */
+code span.cn { color: #000000; } /* Constant */
+code span.co { color: #8f5902; font-style: italic; } /* Comment */
+code span.cv { color: #8f5902; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #8f5902; font-weight: bold; font-style: italic; } /* Documentation */
+code span.dt { color: #204a87; } /* DataType */
+code span.dv { color: #0000cf; } /* DecVal */
+code span.er { color: #a40000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #0000cf; } /* Float */
+code span.fu { color: #000000; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #204a87; font-weight: bold; } /* Keyword */
+code span.op { color: #ce5c00; font-weight: bold; } /* Operator */
+code span.ot { color: #8f5902; } /* Other */
+code span.pp { color: #8f5902; font-style: italic; } /* Preprocessor */
+code span.sc { color: #000000; } /* SpecialChar */
+code span.ss { color: #4e9a06; } /* SpecialString */
+code span.st { color: #4e9a06; } /* String */
+code span.va { color: #000000; } /* Variable */
+code span.vs { color: #4e9a06; } /* VerbatimString */
+code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
+
+.sourceCode .row {
+  width: 100%;
+}
+.sourceCode {
+  overflow-x: auto;
+}
+.code-folding-btn {
+  margin-right: -30px;
+}
+</style>
+<script>
+// apply pandoc div.sourceCode style to pre.sourceCode instead
+(function() {
+  var sheets = document.styleSheets;
+  for (var i = 0; i < sheets.length; i++) {
+    if (sheets[i].ownerNode.dataset["origin"] !== "pandoc") continue;
+    try { var rules = sheets[i].cssRules; } catch (e) { continue; }
+    for (var j = 0; j < rules.length; j++) {
+      var rule = rules[j];
+      // check if there is a div.sourceCode rule
+      if (rule.type !== rule.STYLE_RULE || rule.selectorText !== "div.sourceCode") continue;
+      var style = rule.style.cssText;
+      // check if color or background-color is set
+      if (rule.style.color === '' && rule.style.backgroundColor === '') continue;
+      // replace div.sourceCode by a pre.sourceCode rule
+      sheets[i].deleteRule(j);
+      sheets[i].insertRule('pre.sourceCode{' + style + '}', j);
+    }
+  }
+})();
+</script>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+<style type="text/css">
+.code-folding-btn { margin-bottom: 4px; }
+</style>
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+.tocify-subheader {
+  display: inline;
+}
+.tocify-subheader .tocify-item {
+  font-size: 0.95em;
+}
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">LAURA</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li>
+  <a href="cancer_risk_research.html">Mortalidade de câncer</a>
+</li>
+<li>
+  <a href="mimo_research.html">Mortalidade de gestantes e recém-nascidos</a>
+</li>
+<li>
+  <a href="preterm_research.html">Mortalidade de prematuros</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+<div class="btn-group pull-right">
+<button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Code</span> <span class="caret"></span></button>
+<ul class="dropdown-menu" style="min-width: 50px;">
+<li><a id="rmd-show-all-code" href="#">Show All Code</a></li>
+<li><a id="rmd-hide-all-code" href="#">Hide All Code</a></li>
+</ul>
+</div>
+
+
+
+<h1 class="title toc-ignore">Mortality of pregnants and newborns - Research</h1>
+<h4 class="author">Laura</h4>
+<h4 class="date">03 março, 2020</h4>
+
+</div>
+
+
+<div id="artigos-pesquisados" class="section level1">
+<h1>Artigos pesquisados</h1>
+<p>Pesquisei vários artigos e a lista de todos os pesquisados está contida na seção <strong><em>Referências</em></strong>. Porém abaixo elenquei quatro deles que mostraram ideias importantes sobre a pesquisa de mortalidade de gestantes e recém nascidos com <em>machine learning</em>.</p>
+<p>1- <a href="https://link.springer.com/article/10.1007/s12652-019-01230-4">Biomedical data analytics in mobile-health environments for high-risk pregnancy outcome prediction</a></p>
+<ul>
+<li>Neste artigo, o autor <span class="citation">Moreira et al. (2019)</span>, mostra uma proposta muito similar ao que fazemos na Laura. Um aplicativo para <em>mobile</em> que usa <em>machine learning</em> com o intuito monitirar e fazer predições sobre situações de risco durante a gestação. Ele ressalta a importância das desordens de hipertensão na mortalidade de gestantes, <em>Hypertensive disease of pregnancy</em>. O modelo de machine learning usado pelos autores, é uma rede bayesiana e fazem também a comparação com outros modelos. <strong><em>Vale muito a pena a leitura deste artigo</em></strong>.</li>
+</ul>
+<p>2- <a href="https://ijpds.org/article/view/895">Maternal mortality of women with opioid-use during pregnancy in England:investigating bias in a cohort of linked mother-baby hospital records</a></p>
+<ul>
+<li>Neste artigo, o autor <span class="citation">Blackburn et al. (2018)</span>, levanta a relevância sobre a adicção por opióides e opiáceos ser um problema de saúde pública e ser a maior causa de mortalidade por uso de drogas. É feita uma comparação de todas as causas de mortalidade de gestantes com abstinência e sem abstinência e estimaram a o risco de morte das gestantes relacionando com informações dos nascidos vivos. Pode se adaptar informações de uso de drogas de acordo com a realidade do Brasil pois sabe-se que o consumo de opióides e opiáceos não são tão comuns com outras drogas no Brasil. Porém ainda percebo muitas limitações para utilizar tais informações.</li>
+</ul>
+<p>3- <a href="https://jamanetwork.com/journals/jamapediatrics/article-abstract/2681636">Association Between Vitamin D Supplementation During Pregnancy and Offspring Growth, Morbidity, and Mortality</a></p>
+<ul>
+<li>Neste estudo, o autor <span class="citation">Bi et al. (2018)</span>, discorre sobre a associação da suplementação de vitamina D, durante a gestação, diminuir o risco de mortalidade para o feto. Porém, vejo como um estudo com varias limitações, mas pode-se pensar em coletar tal dado e testar sua significância em modelos de predição da mortalidade neonatal.</li>
+</ul>
+<p>4- <a href="https://bmcpregnancychildbirth.biomedcentral.com/articles/10.1186/s12884-018-1971-2">Comparison of logistic regression with machine learning methods for the prediction of fetal growth abnormalities: a retrospective cohort study</a></p>
+<ul>
+<li>Neste estudo, o autor <span class="citation">Kuhle et al. (2018)</span>, o autor faz uma comparação de alguns modelos de <em>machine learning</em> com a Regressão logística. Nada inovador porém selecionei este artigo pois ele dá uma boa lista de preditores importantes para anomalias no crescimento fetal que podem ser úteis para predição da mortalidade da gestante e do bebê.</li>
+</ul>
+<blockquote>
+<p>Abaixo outros estudos relevantes</p>
+</blockquote>
+<p>5- Além dos artigos mencionados e e pesquisados, há pesquisas que indicam que é importante para os profissionais da área de epidemiologia mensurar os efeitos espaciais que atuam sobre eventos de saúde pública como mortalidade de gestantes e infantil. A abordagem determina a identificação de áreas com maior ou menor risco uma vez que é comprovado que a localização espacial dos eventos influencia a mortalidade. Duas boas referências são <span class="citation">Shimakura et al. (2001)</span> e <span class="citation">Barletta, Sousa, and Shimakura (2006)</span></p>
+<ul>
+<li><p><a href="http://www.leg.ufpr.br/lib/exe/fetch.php/projetos:tcc_versao_final1.pdf">Fatores de risco e distribuição espacial do risco para a mortalidade infantil em Curitiba, Brasil</a></p></li>
+<li><p><a href="https://www.scielosp.org/article/csp/2001.v17n5/1251-1261/pt/">Distribuição espacial do risco: modelagem da mortalidade infantil em Porto Alegre, Rio Grande do Sul, Brasil</a></p></li>
+</ul>
+<p>6- Outra importante informação é a grande quantidade de estudos sobre mortalidade com a abordagem espacial por meio da Inferência Bayesiana. Muitos trabalhos publicados o que mostra a maior eficácia desta abordagem para a modelagem de mortalidade levando em consideração tempo e espaço em que os eventos ocorreram. Alguns autores publicaram estudos com tais abordagens, <span class="citation">Krainski et al. (2018)</span>, <span class="citation">Khana et al. (2018)</span>, <span class="citation">Loquiha et al. (2018)</span>, <span class="citation">Blangiardo and Cameletti (2015)</span>, <span class="citation">Musenge et al. (2013)</span>.</p>
+<ul>
+<li><p><a href="https://www.taylorfrancis.com/books/9780429629853">Advanced Spatial Modeling with Stochastic Partial Differential Equations Using R and INLA</a></p></li>
+<li><p><a href="A%20Bayesian%20spatial%20and%20temporal%20modeling%20approach%20to%20mapping%20geographic%20variation%20in%20mortality%20rates%20for%20subnational%20areas%20with%20R-INLA">A Bayesian spatial and temporal modeling approach to mapping geographic variation in mortality rates for subnational areas with R-INLA</a></p></li>
+<li><p><a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0202186">Mapping maternal mortality rate via spatial zero-inflated models for count data: A case study of facility-based maternal deaths from Mozambique</a></p></li>
+<li><p><a href="https://books.google.com.br/books?hl=en&amp;lr=&amp;id=--HuBgAAQBAJ&amp;oi=fnd&amp;pg=PA259&amp;dq=Spatial+and+spatio-temporal+Bayesian+models+with+R-INLA&amp;ots=VTEBD3sgRX&amp;sig=2rfXYJJDy7qUNsJPRgUdGGV8WC8&amp;redir_esc=y#v=onepage&amp;q=Spatial%20and%20spatio-temporal%20Bayesian%20models%20with%20R-INLA&amp;f=false">Spatial and spatio-temporal Bayesian models with R-INLA</a></p></li>
+<li><p><a href="https://www.sciencedirect.com/science/article/pii/S0303243412000645">Bayesian analysis of zero inflated spatiotemporal HIV/TB child mortality data through the INLA and SPDE approaches: Applied to data observed between 1992 and 2010 in rural North East South Africa</a></p></li>
+</ul>
+<blockquote>
+<p>Tabela 1 - Informações relevantes</p>
+</blockquote>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" title="1">text_tbl &lt;-<span class="st"> </span><span class="kw">data.frame</span>(</a>
+<a class="sourceLine" id="cb1-2" title="2">  Informaçõ<span class="dt">es =</span> <span class="kw">c</span>(<span class="st">&quot;Cadastrais - possíveis fatores de risco&quot;</span>, <span class="st">&quot;Espaço-temporal&quot;</span>,<span class="st">&quot;Sintomas antes do internamento&quot;</span>,<span class="st">&quot;Sintomas durante a gestação&quot;</span>,<span class="st">&quot;Identificação de desordem hipertensiva&quot;</span>),</a>
+<a class="sourceLine" id="cb1-3" title="3">  Descriçã<span class="dt">o =</span> <span class="kw">c</span>(</a>
+<a class="sourceLine" id="cb1-4" title="4">    <span class="st">&quot;Idade da gestante, idade gestacional, histórico familiar de pré-eclampsia, tipo de parto, escolaridade da mãe, quantidade de filhos vivos e mortos, quantidade de gestação e intervalo entre as gestações, nova paternidade, peso da gestante, peso ao nascer da criança, sexo da criança, momento da menarca, uso de drogas lícita ou ilícitas, hábitos de vidas (tabagismo e alcoolismo),características biológicas e químicas, condições de exposição a ocupação de stress e esforço físico, já teve aborto ou não e histórico reprodutivo (morte perinatal, recém-nascido com má formação, esterilidade/infertilidade, etc).&quot;</span>, </a>
+<a class="sourceLine" id="cb1-5" title="5">    <span class="st">&quot;Localização espacial do evento (latitude e longitude) e tempo que levou para ocorrer o evento. &quot;</span>,</a>
+<a class="sourceLine" id="cb1-6" title="6">    <span class="st">&quot;Obesidade, diabetes e qual tipo, hemorragia, hipertensão, enxaqueca, tendência em trombofilia, doenças autoimunes - esclerodermia, lúpus, reumatoide e artrite, doenças infecciosas, pneumonia, neoplasia, etc.&quot;</span>,</a>
+<a class="sourceLine" id="cb1-7" title="7">    <span class="st">&quot;Hipertensão, desordem cardíaca, pneumonia, proteinúria, diagnóstico de HELLP, enxaqueca, náusea ou vômito, edema, dor epigástrica, hiperreflexia, visão turva e tontura.&quot;</span>,</a>
+<a class="sourceLine" id="cb1-8" title="8">    <span class="st">&quot;identificação de desordem hipertensiva pré-existente, durante gestação e período puerpério e eclampsia&quot;</span>)</a>
+<a class="sourceLine" id="cb1-9" title="9">)</a>
+<a class="sourceLine" id="cb1-10" title="10"></a>
+<a class="sourceLine" id="cb1-11" title="11"><span class="kw">kable</span>(text_tbl) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb1-12" title="12"><span class="st">  </span><span class="kw">kable_styling</span>(<span class="dt">full_width =</span> F) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb1-13" title="13"><span class="st">  </span><span class="kw">column_spec</span>(<span class="dv">1</span>, <span class="dt">bold =</span> T, <span class="dt">border_right =</span> T) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb1-14" title="14"><span class="st">  </span><span class="kw">column_spec</span>(<span class="dv">2</span>, <span class="dt">width =</span> <span class="st">&quot;30em&quot;</span>, <span class="dt">background =</span> <span class="st">&quot;white&quot;</span>,<span class="dt">color=</span><span class="st">&quot;orangered&quot;</span>)</a></code></pre></div>
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Informações
+</th>
+<th style="text-align:left;">
+Descrição
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+Cadastrais - possíveis fatores de risco
+</td>
+<td style="text-align:left;width: 30em; color: orangered !important;background-color: white !important;">
+Idade da gestante, idade gestacional, histórico familiar de pré-eclampsia, tipo de parto, escolaridade da mãe, quantidade de filhos vivos e mortos, quantidade de gestação e intervalo entre as gestações, nova paternidade, peso da gestante, peso ao nascer da criança, sexo da criança, momento da menarca, uso de drogas lícita ou ilícitas, hábitos de vidas (tabagismo e alcoolismo),características biológicas e químicas, condições de exposição a ocupação de stress e esforço físico, já teve aborto ou não e histórico reprodutivo (morte perinatal, recém-nascido com má formação, esterilidade/infertilidade, etc).
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+Espaço-temporal
+</td>
+<td style="text-align:left;width: 30em; color: orangered !important;background-color: white !important;">
+Localização espacial do evento (latitude e longitude) e tempo que levou para ocorrer o evento.
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+Sintomas antes do internamento
+</td>
+<td style="text-align:left;width: 30em; color: orangered !important;background-color: white !important;">
+Obesidade, diabetes e qual tipo, hemorragia, hipertensão, enxaqueca, tendência em trombofilia, doenças autoimunes - esclerodermia, lúpus, reumatoide e artrite, doenças infecciosas, pneumonia, neoplasia, etc.
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+Sintomas durante a gestação
+</td>
+<td style="text-align:left;width: 30em; color: orangered !important;background-color: white !important;">
+Hipertensão, desordem cardíaca, pneumonia, proteinúria, diagnóstico de HELLP, enxaqueca, náusea ou vômito, edema, dor epigástrica, hiperreflexia, visão turva e tontura.
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+Identificação de desordem hipertensiva
+</td>
+<td style="text-align:left;width: 30em; color: orangered !important;background-color: white !important;">
+identificação de desordem hipertensiva pré-existente, durante gestação e período puerpério e eclampsia
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Na Tabela 1 há uma visão geral sobre informações que podem ser utilizadas em estudos de mortalidade de gestantes e recém nascidos. Os estudos mais recentes e de vanguarda sobre estes temas unem técnicas de <em>machine learning</em> com abordagem bayesiana espaço-temporal.</p>
+</blockquote>
+<ul>
+<li><p>Outros artigos pesquisados: <span class="citation">(Rodrı́guez et al. 2016)</span>.</p></li>
+<li><p><strong>HELLP</strong>, é definida como uma síndrome. Condição laboratorial determinada por três sinais vitais: hemólise, baixa contagem de plaquetas e elevação das enzimas hepáticas.</p></li>
+</ul>
+</div>
+<div id="referências" class="section level1 unnumbered">
+<h1>Referências</h1>
+<div id="refs" class="references">
+<div id="ref-barlettaTCC">
+<p>Barletta, Felipe, Valéria F Sousa, and Silvia E Shimakura. 2006. “Fatores de Risco E Distribuição Espacial Do Risco Para a Mortalidade Infantil Em Curitiba, Brasil.” Trabalho de conclusão de curso. Curitiba: Universidade Federal do Paraná.</p>
+</div>
+<div id="ref-bi2018association">
+<p>Bi, Wei Guang, Anne Monique Nuyt, Hope Weiler, Line Leduc, Christina Santamaria, and Shu Qin Wei. 2018. “Association Between Vitamin d Supplementation During Pregnancy and Offspring Growth, Morbidity, and Mortality: A Systematic Review and Meta-Analysis.” <em>JAMA Pediatrics</em> 172 (7): 635–45.</p>
+</div>
+<div id="ref-blackburn2018maternal">
+<p>Blackburn, Ruth, Linda Wijlaars, Katie Harron, Astrid Guttmann, and Ruth Gilbert. 2018. “Maternal Mortality of Women with Opioid-Use During Pregnancy in England: Investigating Bias in a Cohort of Linked Mother-Baby Hospital Records.” <em>International Journal of Population Data Science</em> 3 (4).</p>
+</div>
+<div id="ref-blangiardo2015spatial">
+<p>Blangiardo, Marta, and Michela Cameletti. 2015. <em>Spatial and Spatio-Temporal Bayesian Models with R-Inla</em>. John Wiley &amp; Sons.</p>
+</div>
+<div id="ref-khana2018bayesian">
+<p>Khana, Diba, Lauren M Rossen, Holly Hedegaard, and Margaret Warner. 2018. “A Bayesian Spatial and Temporal Modeling Approach to Mapping Geographic Variation in Mortality Rates for Subnational Areas with R-Inla.” <em>Journal of Data Science: JDS</em> 16 (1): 147.</p>
+</div>
+<div id="ref-krainski2018advanced">
+<p>Krainski, Elias T, Virgilio Gómez-Rubio, Haakon Bakka, Amanda Lenzi, Daniela Castro-Camilo, Daniel Simpson, Finn Lindgren, and Håvard Rue. 2018. <em>Advanced Spatial Modeling with Stochastic Partial Differential Equations Using R and Inla</em>. Chapman; Hall/CRC.</p>
+</div>
+<div id="ref-kuhle2018comparison">
+<p>Kuhle, Stefan, Bryan Maguire, Hongqun Zhang, David Hamilton, Alexander C Allen, KS Joseph, and Victoria M Allen. 2018. “Comparison of Logistic Regression with Machine Learning Methods for the Prediction of Fetal Growth Abnormalities: A Retrospective Cohort Study.” <em>BMC Pregnancy and Childbirth</em> 18 (1): 333.</p>
+</div>
+<div id="ref-loquiha2018mapping">
+<p>Loquiha, Osvaldo, Niel Hens, Leonardo Chavane, Marleen Temmerman, Nafissa Osman, Christel Faes, and Marc Aerts. 2018. “Mapping Maternal Mortality Rate via Spatial Zero-Inflated Models for Count Data: A Case Study of Facility-Based Maternal Deaths from Mozambique.” <em>PloS One</em> 13 (11): e0202186.</p>
+</div>
+<div id="ref-moreira2019biomedical">
+<p>Moreira, Mário WL, Joel JPC Rodrigues, Francisco HC Carvalho, Naveen Chilamkurti, Jalal Al-Muhtadi, and Victor Denisov. 2019. “Biomedical Data Analytics in Mobile-Health Environments for High-Risk Pregnancy Outcome Prediction.” <em>Journal of Ambient Intelligence and Humanized Computing</em>, 1–14.</p>
+</div>
+<div id="ref-musenge2013bayesian">
+<p>Musenge, Eustasius, Tobias Freeman Chirwa, Kathleen Kahn, and Penelope Vounatsou. 2013. “Bayesian Analysis of Zero Inflated Spatiotemporal Hiv/Tb Child Mortality Data Through the Inla and Spde Approaches: Applied to Data Observed Between 1992 and 2010 in Rural North East South Africa.” <em>International Journal of Applied Earth Observation and Geoinformation</em> 22: 86–98.</p>
+</div>
+<div id="ref-rodriguez2016early">
+<p>Rodrı́guez, Eugenia Arrieta, Francisco Edna Estrada, William Caicedo Torres, and Juan Carlos Martı́nez Santos. 2016. “Early Prediction of Severe Maternal Morbidity Using Machine Learning Techniques.” In <em>Ibero-American Conference on Artificial Intelligence</em>, 259–70. Springer.</p>
+</div>
+<div id="ref-shimakura2001distribuiccao">
+<p>Shimakura, Silvia E, Marilia Sá Carvalho, Denise RGC Aerts, and Rui Flores. 2001. “Distribuição Espacial Do Risco: Modelagem Da Mortalidade Infantil Em Porto Alegre, Rio Grande Do Sul, Brasil.” <em>Cadernos de Saúde Pública</em> 17: 1251–61.</p>
+</div>
+</div>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+<script>
+$(document).ready(function () {
+  window.initializeCodeFolding("hide" === "show");
+});
+</script>
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = false;
+    options.smoothScroll = false;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+---
+title: "Mortality of preterms  - Research"
+author: "Laura"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output:
+  html_document:
+    code_folding: hide
+    highlight: tango
+    theme: united
+    toc: yes
+    toc_depth: 2
+    toc_float:
+      collapsed: no
+      smooth_scroll: no
+bibliography: ref.bib
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      comment = NA,
+                      warning = FALSE,
+                      message = FALSE,
+                      cache=TRUE,
+                      fig.path = "Figuras/")
+library(dplyr)
+library(knitr)
+library(kableExtra)
+```
+
+```{R, echo=TRUE, results='hide'}
+rm(list=ls())
+setwd('~/Documents/Mimo_research/prematuro/')
+```
+
+
+# Artigos pesquisados
+
+Pesquisei vários artigos e a lista de todos os pesquisados está contida na seção ***Referências***. Porém abaixo elenquei três deles que mostraram ideias importantes sobre a pesquisa de mortalidade de gestantes e recém nascidos com *machine learning*.
+
+1- *Improving preterm newborn identification in low-resource settings with machine learning* 
+
+  - Neste artigo, o autor @rittenhouse2019improving, ressalta a relevância dos nascimentos prematuros em relaçãoa mortalidade neonatal, principalmente em países de baixa renda. A proposta do artigo é ajustar um modelo de *machine learning* combinando informações da idade gestacional com características dos prematuros e das mães para predição dos nascimentos prematuros. Uma limitação deste estudo é que foi aplicado em dados do país africano Zambia e não para a predição de mortalidade dos prematuros, porém dá bons indpicios de informações que podem ser usadas nos modelos da ***Laura*** para ao tema referido.
+  
+2- *Trends in Care Practices, Morbidity, and Mortality of Extremely Preterm Neonates, 1993-2012*
+
+  - Neste artigo, o autor @stoll2015trends, faz um estudo retrospectivo (coorte) para avaliar se ao longo do tempo - entre 1993 e 2012 - as mudanças em cuidados aos prematuros ajudou a diminuir a mortalidade e morbidade em prematuros neonatal nascidos no *Neonatal Research Network centers* nos Estados Unidos. Limitação de ser um estudo com perfil do público americano que é diferente ao brasileiro, porém dá bons indícios de informações a serem usadas nos modelos da ***Laura*** para ao tema referido. 
+
+3- *Artificial neural network for risk assessment in preterm neonates* 
+
+  - Neste estudo, o autor @zernikow1998artificial , compara um modelo de rede neural versus um de regressão logística para predição de mortalidade de prematuros. Apsesar de ser um estudo antigo, de 1998, pode auxiliar bastante em definir informações a serem usadas pois é um dos poucos estudos com *machine learning* tendo como principal objetivo de predizer o óbito de prematuros.
+  
+
+> Uma abordagem bayesiana com o *INLA* pode ser investigada também para os modelo da ***LAURA*** para prematuros. Portanto, as referências bayesianas usadas na pesquisa sobre gestantes e recém nascidos podem ser apreciadas neste contexto também.
+
+  
+  
+>Tabela 1 - Informações relevantes
+
+```{R}
+text_tbl <- data.frame(
+  Informações = c("Cadastrais", "Dados de internamento"),
+  Descrição = c(
+    "Idade da gestante, idade gestacional, gestação com gêmeos, escolaridade da mãe, quantidade de filhos vivos e mortos, peso ao nascer do prematuro, sexo da criança, tempo de vida do prematuro, infecção maternal com HIV.", 
+	"Apgar, sinais vitais (temperatura, PH, etc), Tipo de emergência no internamento, alguma má formação congênita, houve ou não ventilação no transporte, intubação do prematuro e tempo de intubação, presença de alguma doença e com ncecessidade de cirurgia e tratamento com antibiótico, presença de doença respiratória e algm tipo de infecção. "
+    )
+)
+
+kable(text_tbl) %>%
+  kable_styling(full_width = F) %>%
+  column_spec(1, bold = T, border_right = T) %>%
+  column_spec(2, width = "30em", background = "white",color="orangered")
+```
+
+> Na Tabela 1 há uma visão geral sobre informações que podem ser utilizadas em estudos de mortalidade de prematuros. A grande maioria dos estudos sobre prematuros, tem como principal foco predizer o nascimento do prematuro para a prevenção do evento. Ainda há poucos estudos na literatura que tem como principal objetivo predizer a mortalidade do prematuro uma vez que eeste evento já ocorreu.
+
+- Outros artigos pesquisados: [@kramer2000contribution], [@saria2010integration], [@van1994using], [@chen2011exploring]
+
+
+# Referências
+

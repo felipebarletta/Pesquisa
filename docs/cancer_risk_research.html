@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+<meta name="author" content="Laura" />
+
+
+<title>Cancer Risk - Research</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/united.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<script src="site_libs/navigation-1.1/codefolding.js"></script>
+<script src="site_libs/kePrint-0.0.1/kePrint.js"></script>
+
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css" data-origin="pandoc">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  { background-color: #f8f8f8; }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ef2929; } /* Alert */
+code span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #c4a000; } /* Attribute */
+code span.bn { color: #0000cf; } /* BaseN */
+code span.cf { color: #204a87; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4e9a06; } /* Char */
+code span.cn { color: #000000; } /* Constant */
+code span.co { color: #8f5902; font-style: italic; } /* Comment */
+code span.cv { color: #8f5902; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #8f5902; font-weight: bold; font-style: italic; } /* Documentation */
+code span.dt { color: #204a87; } /* DataType */
+code span.dv { color: #0000cf; } /* DecVal */
+code span.er { color: #a40000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #0000cf; } /* Float */
+code span.fu { color: #000000; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #204a87; font-weight: bold; } /* Keyword */
+code span.op { color: #ce5c00; font-weight: bold; } /* Operator */
+code span.ot { color: #8f5902; } /* Other */
+code span.pp { color: #8f5902; font-style: italic; } /* Preprocessor */
+code span.sc { color: #000000; } /* SpecialChar */
+code span.ss { color: #4e9a06; } /* SpecialString */
+code span.st { color: #4e9a06; } /* String */
+code span.va { color: #000000; } /* Variable */
+code span.vs { color: #4e9a06; } /* VerbatimString */
+code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
+
+.sourceCode .row {
+  width: 100%;
+}
+.sourceCode {
+  overflow-x: auto;
+}
+.code-folding-btn {
+  margin-right: -30px;
+}
+</style>
+<script>
+// apply pandoc div.sourceCode style to pre.sourceCode instead
+(function() {
+  var sheets = document.styleSheets;
+  for (var i = 0; i < sheets.length; i++) {
+    if (sheets[i].ownerNode.dataset["origin"] !== "pandoc") continue;
+    try { var rules = sheets[i].cssRules; } catch (e) { continue; }
+    for (var j = 0; j < rules.length; j++) {
+      var rule = rules[j];
+      // check if there is a div.sourceCode rule
+      if (rule.type !== rule.STYLE_RULE || rule.selectorText !== "div.sourceCode") continue;
+      var style = rule.style.cssText;
+      // check if color or background-color is set
+      if (rule.style.color === '' && rule.style.backgroundColor === '') continue;
+      // replace div.sourceCode by a pre.sourceCode rule
+      sheets[i].deleteRule(j);
+      sheets[i].insertRule('pre.sourceCode{' + style + '}', j);
+    }
+  }
+})();
+</script>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+<style type="text/css">
+.code-folding-btn { margin-bottom: 4px; }
+</style>
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+.tocify-subheader {
+  display: inline;
+}
+.tocify-subheader .tocify-item {
+  font-size: 0.95em;
+}
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">LAURA</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li>
+  <a href="cancer_risk_research.html">Mortalidade de câncer</a>
+</li>
+<li>
+  <a href="mimo_research.html">Mortalidade de gestantes e recém-nascidos</a>
+</li>
+<li>
+  <a href="preterm_research.html">Mortalidade de prematuros</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+<div class="btn-group pull-right">
+<button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Code</span> <span class="caret"></span></button>
+<ul class="dropdown-menu" style="min-width: 50px;">
+<li><a id="rmd-show-all-code" href="#">Show All Code</a></li>
+<li><a id="rmd-hide-all-code" href="#">Hide All Code</a></li>
+</ul>
+</div>
+
+
+
+<h1 class="title toc-ignore">Cancer Risk - Research</h1>
+<h4 class="author">Laura</h4>
+<h4 class="date">03 março, 2020</h4>
+
+</div>
+
+
+<div id="artigos-pesquisados" class="section level1">
+<h1>Artigos pesquisados</h1>
+<p>Pesquisei vários artigos , como segue na seção <strong><em>Referências</em></strong>. Todos pesquisados estão contidos nesta seção. Porém abaixo elenquei quatro deles que mostraram ideias importantes sobre a pesquisa de câncer com <em>machine learning</em>.</p>
+<p>1- <a href="https://www.sciencedirect.com/science/article/pii/S2001037014000464">Machine learning applications in cancer prognosis and prediction</a></p>
+<ul>
+<li>Neste artigo, <span class="citation">Kourou et al. (2015)</span>, apresenta uma pesquisa de recentes aplicações de <em>machine learning</em> para modelar a progressão de câncer. É discutido vários tipos de modelos e os tipos de dados em três âmbitos: fatores de risco, recorrência e sobrevivência. Também é discutido o crescimento de pesquisas sobre o tema.</li>
+</ul>
+<p>2- <a href="The%20Impact%20of%20Psychiatric%20Utilisation%20Prior%20to%20Cancer%20Diagnosis%20on%20Survival%20of%20Solid%20Organ%20Malignancies">The Impact of Psychiatric Utilisation Prior to Cancer Diagnosis on Survival of Solid Organ Malignancies</a></p>
+<ul>
+<li>Neste artigo, <span class="citation">Klaassen et al. (2019)</span>, apresenta um estudo com pacientes de câncer em Ontário, Canadá, que diz que a mortalidade por câncer também é associada a histórico por tratamento por doença mental. Não vejo que podemos cravar doenças psiquiátricas como um fator de risco para a mortalidade em câncer, poiś é um estudo prévio no Canadá, outros estudos devem ser realizados para ter mais confiança porém é um primeiro indício.</li>
+</ul>
+<p>3- <a href="https://bmjopen.bmj.com/content/4/3/e004007.short">Machine-learning prediction of cancer survival: a retrospective study using electronic administrative records and a cancer registry</a></p>
+<ul>
+<li>Neste artigo, o autor <span class="citation">Gupta et al. (2014)</span>, apresenta um estudo em que o modelo de <em>machine learning</em> ajustado utiliza registros eletrônicos sobre o estado de saúde dos pacientes. Tem uma similaridade com a proposta da Laura sobre coleta de informações em tempo real dos pacientes.Interessante estudo.</li>
+</ul>
+<p>4- <a href="https://arxiv.org/abs/1902.07839">Inference of a Multi-Domain Machine Learning Model to Predict Mortality in Hospital Stays for Patients with Cancer upon Febrile Neutropenia Onset</a></p>
+<ul>
+<li>Neste artigo o autor, <span class="citation">Du et al. (2019)</span>, usa <em>machine learning</em> para predição de mortalidade de câncer e a principal informação que ele ressalta é a alta associação da mortalidade de pacientes adultos com câncer com a <strong>neutropenia febril</strong> que é definida como uma temperatura superior a <span class="math inline">\(38^\circ\)</span>C e uma contagem de neutrófilos menor <span class="math inline">\(500/ul\)</span>.</li>
+</ul>
+<blockquote>
+<p>Tabela 1 - Informações relevantes</p>
+</blockquote>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" title="1">text_tbl &lt;-<span class="st"> </span><span class="kw">data.frame</span>(</a>
+<a class="sourceLine" id="cb1-2" title="2">  Informaçõ<span class="dt">es =</span> <span class="kw">c</span>(<span class="st">&quot;Cadastrais&quot;</span>, <span class="st">&quot;Clínicos e patológicos&quot;,&quot;</span>Expressão genética<span class="st">&quot;, &quot;</span>Dados genômicos<span class="st">&quot;,&quot;</span>SNPs<span class="st">&quot;),</span></a>
+<a class="sourceLine" id="cb1-3" title="3"><span class="st">  Descrição = c(</span></a>
+<a class="sourceLine" id="cb1-4" title="4"><span class="st">    &quot;</span>Dados com as características demográficas e sócio econômicas dos pacientes.<span class="st">&quot;, </span></a>
+<a class="sourceLine" id="cb1-5" title="5"><span class="st">    &quot;</span>Resultados de exames e medições de sinais vitais. Presença, sintomas e histórico de doenças, tais como doenças psiquiátricas. <span class="st">&quot;,</span></a>
+<a class="sourceLine" id="cb1-6" title="6"><span class="st">    &quot;</span>Processo ais quais a informação contida nos genes é convertida em moléculas que determinam as propriedades da célula, ou seja, é a transferência de informação genética de DNA a proteína.<span class="st">&quot;,</span></a>
+<a class="sourceLine" id="cb1-7" title="7"><span class="st">    &quot;</span>São dados especiais que caracterizam pessoas, famílias e até etnias. Informações podem ser extraídas de bases de dados de perfis de DNA.<span class="st">&quot;,</span></a>
+<a class="sourceLine" id="cb1-8" title="8"><span class="st">    &quot;</span><span class="op">*</span>Single nucleotide polymorphisms<span class="op">*</span>, são os tipos mais comuns de variação genética entre pessoas. Cada SNP representa uma diferença em um único bloco de construção do DNA, chamado nucleotídeo.<span class="st">&quot;</span></a>
+<a class="sourceLine" id="cb1-9" title="9"><span class="st">  )</span></a>
+<a class="sourceLine" id="cb1-10" title="10"><span class="st">)</span></a>
+<a class="sourceLine" id="cb1-11" title="11"></a>
+<a class="sourceLine" id="cb1-12" title="12"><span class="st">kable(text_tbl) %&gt;%</span></a>
+<a class="sourceLine" id="cb1-13" title="13"><span class="st">  kable_styling(full_width = F) %&gt;%</span></a>
+<a class="sourceLine" id="cb1-14" title="14"><span class="st">  column_spec(1, bold = T, border_right = T) %&gt;%</span></a>
+<a class="sourceLine" id="cb1-15" title="15"><span class="st">  column_spec(2, width = &quot;</span>30em<span class="st">&quot;, background = &quot;</span>white<span class="st">&quot;,color=&quot;</span>orangered<span class="st">&quot;)</span></a></code></pre></div>
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Informações
+</th>
+<th style="text-align:left;">
+Descrição
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+Cadastrais
+</td>
+<td style="text-align:left;width: 30em; color: orangered !important;background-color: white !important;">
+Dados com as características demográficas e sócio econômicas dos pacientes.
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+Clínicos e patológicos
+</td>
+<td style="text-align:left;width: 30em; color: orangered !important;background-color: white !important;">
+Resultados de exames e medições de sinais vitais. Presença, sintomas e histórico de doenças, tais como doenças psiquiátricas.
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+Expressão genética
+</td>
+<td style="text-align:left;width: 30em; color: orangered !important;background-color: white !important;">
+Processo ais quais a informação contida nos genes é convertida em moléculas que determinam as propriedades da célula, ou seja, é a transferência de informação genética de DNA a proteína.
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+Dados genômicos
+</td>
+<td style="text-align:left;width: 30em; color: orangered !important;background-color: white !important;">
+São dados especiais que caracterizam pessoas, famílias e até etnias. Informações podem ser extraídas de bases de dados de perfis de DNA.
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+SNPs
+</td>
+<td style="text-align:left;width: 30em; color: orangered !important;background-color: white !important;">
+<em>Single nucleotide polymorphisms</em>, são os tipos mais comuns de variação genética entre pessoas. Cada SNP representa uma diferença em um único bloco de construção do DNA, chamado nucleotídeo.
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Na Tabela 1 há uma visão geral sobre informações que podem ser utilizadas em estudos de mortalidade de câncer. Notei, em geral, são ajustados modelos inferenciais para risco e <em>machine learning</em>, para cada tipo de câncer.</p>
+</blockquote>
+<blockquote>
+<p>Portanto na Tabela 2, uma visão das principais informações sobre os três tipos de câncer mais prevalentes na população do Brasil, como divulgado no site oficial do <span class="citation">INCA (2018)</span>.</p>
+</blockquote>
+<blockquote>
+<p>Tabela 2 - Informações relevantes por tipo de câncer</p>
+</blockquote>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" title="1">text_tbl &lt;-<span class="st"> </span><span class="kw">data.frame</span>(</a>
+<a class="sourceLine" id="cb2-2" title="2">  Câ<span class="dt">ncer =</span> <span class="kw">c</span>(<span class="st">&quot;Próstata&quot;, &quot;</span>Mama<span class="st">&quot;,&quot;</span>Traquéia, brônquio e pulmão<span class="st">&quot;),</span></a>
+<a class="sourceLine" id="cb2-3" title="3"><span class="st">  Features = c(&quot;</span>Histórico de câncer de próstata na família, idade do paciente, valor do biomarcador PSA, tempo de diagnóstico do câncer e extensão do tumor<span class="st">&quot;, </span></a>
+<a class="sourceLine" id="cb2-4" title="4"><span class="st">  &quot;</span>Idade do paciente, tempo de diagnóstico do câncer, número de nodos, <span class="dv">50</span><span class="op">-</span><span class="st"> </span>gene signature, tamanho do tumor, histologia e informações sobre os genes MMP9, HRASLA e RAB27B e local do tumor<span class="st">&quot;,</span></a>
+<a class="sourceLine" id="cb2-5" title="5"><span class="st">  &quot;</span>Sexo, idade do paciente, genes LCK e ERBB2 e outros biomarcadores moleculares referentes ao câncer de pulmão<span class="st">&quot;)</span></a>
+<a class="sourceLine" id="cb2-6" title="6"><span class="st">)</span></a>
+<a class="sourceLine" id="cb2-7" title="7"></a>
+<a class="sourceLine" id="cb2-8" title="8"><span class="st">kable(text_tbl) %&gt;%</span></a>
+<a class="sourceLine" id="cb2-9" title="9"><span class="st">  kable_styling(full_width = F) %&gt;%</span></a>
+<a class="sourceLine" id="cb2-10" title="10"><span class="st">  column_spec(1, bold = T, border_right = T) %&gt;%</span></a>
+<a class="sourceLine" id="cb2-11" title="11"><span class="st">  column_spec(2, width = &quot;</span>30em<span class="st">&quot;, background = &quot;</span>white<span class="st">&quot;,color=&quot;</span>orangered<span class="st">&quot;)</span></a></code></pre></div>
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Câncer
+</th>
+<th style="text-align:left;">
+Features
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+Próstata
+</td>
+<td style="text-align:left;width: 30em; color: orangered !important;background-color: white !important;">
+Histórico de câncer de próstata na família, idade do paciente, valor do biomarcador PSA, tempo de diagnóstico do câncer e extensão do tumor
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+Mama
+</td>
+<td style="text-align:left;width: 30em; color: orangered !important;background-color: white !important;">
+Idade do paciente, tempo de diagnóstico do câncer, número de nodos, 50- gene signature, tamanho do tumor, histologia e informações sobre os genes MMP9, HRASLA e RAB27B e local do tumor
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+Traquéia, brônquio e pulmão
+</td>
+<td style="text-align:left;width: 30em; color: orangered !important;background-color: white !important;">
+Sexo, idade do paciente, genes LCK e ERBB2 e outros biomarcadores moleculares referentes ao câncer de pulmão
+</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Outros artigos pesquisados: <span class="citation">(Ferrer et al. 2016)</span>, <span class="citation">(Silva, Mainenti, and Laizo 2015)</span>, <span class="citation">(Chen, Ke, and Chiu 2014)</span>, <span class="citation">(Kim and Shin 2013)</span>, <span class="citation">(Ahmad et al. 2013)</span>, <span class="citation">(Park et al. 2013)</span>, <span class="citation">(Kim et al. 2012)</span>, <span class="citation">(Xu et al. 2012)</span>,<span class="citation">(Gevaert et al. 2006)</span> e <span class="citation">(Delen, Walker, and Kadam 2005)</span>.</li>
+</ul>
+</div>
+<div id="referências" class="section level1 unnumbered">
+<h1>Referências</h1>
+<div id="refs" class="references">
+<div id="ref-ahmad2013using">
+<p>Ahmad, L Gh, AT Eshlaghy, A Poorebrahimi, M Ebrahimi, AR Razavi, and others. 2013. “Using Three Machine Learning Techniques for Predicting Breast Cancer Recurrence.” <em>J Health Med Inform</em> 4 (124): 3.</p>
+</div>
+<div id="ref-chen2014risk">
+<p>Chen, Yen-Chen, Wan-Chi Ke, and Hung-Wen Chiu. 2014. “Risk Classification of Cancer Survival Using Ann with Gene Expression Data from Multiple Laboratories.” <em>Computers in Biology and Medicine</em> 48: 1–7.</p>
+</div>
+<div id="ref-delen2005predicting">
+<p>Delen, Dursun, Glenn Walker, and Amit Kadam. 2005. “Predicting Breast Cancer Survivability: A Comparison of Three Data Mining Methods.” <em>Artificial Intelligence in Medicine</em> 34 (2): 113–27.</p>
+</div>
+<div id="ref-du2019inference">
+<p>Du, Xinsong, Jae Min, Dominick J Lemas, and Mattia Prosperi. 2019. “Inference of a Multi-Domain Machine Learning Model to Predict Mortality in Hospital Stays for Patients with Cancer Upon Febrile Neutropenia Onset.” <em>arXiv Preprint arXiv:1902.07839</em>.</p>
+</div>
+<div id="ref-ferrer2016joint">
+<p>Ferrer, Loı̈c, Virginie Rondeau, James Dignam, Tom Pickles, Hélène Jacqmin-Gadda, and Cécile Proust-Lima. 2016. “Joint Modelling of Longitudinal and Multi-State Processes: Application to Clinical Progressions in Prostate Cancer.” <em>Statistics in Medicine</em> 35 (22): 3933–48.</p>
+</div>
+<div id="ref-gevaert2006predicting">
+<p>Gevaert, Olivier, Frank De Smet, Dirk Timmerman, Yves Moreau, and Bart De Moor. 2006. “Predicting the Prognosis of Breast Cancer by Integrating Clinical and Microarray Data with Bayesian Networks.” <em>Bioinformatics</em> 22 (14): e184–e190.</p>
+</div>
+<div id="ref-gupta2014machine">
+<p>Gupta, Sunil, Truyen Tran, Wei Luo, Dinh Phung, Richard Lee Kennedy, Adam Broad, David Campbell, et al. 2014. “Machine-Learning Prediction of Cancer Survival: A Retrospective Study Using Electronic Administrative Records and a Cancer Registry.” <em>BMJ Open</em> 4 (3): e004007.</p>
+</div>
+<div id="ref-inca">
+<p>INCA, Instituto nacional de câncer. 2018. “Estatísticas de Câncer.” 2018. <a href="https://www.inca.gov.br/numeros-de-cancer">https://www.inca.gov.br/numeros-de-cancer</a>.</p>
+</div>
+<div id="ref-kim2013breast">
+<p>Kim, Juhyeon, and Hyunjung Shin. 2013. “Breast Cancer Survivability Prediction Using Labeled, Unlabeled, and Pseudo-Labeled Patient Data.” <em>Journal of the American Medical Informatics Association</em> 20 (4): 613–18.</p>
+</div>
+<div id="ref-kim2012development">
+<p>Kim, Woojae, Ku Sang Kim, Jeong Eon Lee, Dong-Young Noh, Sung-Won Kim, Yong Sik Jung, Man Young Park, and Rae Woong Park. 2012. “Development of Novel Breast Cancer Recurrence Prediction Model Using Support Vector Machine.” <em>Journal of Breast Cancer</em> 15 (2): 230–38.</p>
+</div>
+<div id="ref-klaassen2019impact">
+<p>Klaassen, Zachary, Christopher JD Wallis, Hanan Goldberg, Thenappan Chandrasekar, Rashid K Sayyid, Stephen B Williams, Kelvin A Moses, et al. 2019. “The Impact of Psychiatric Utilisation Prior to Cancer Diagnosis on Survival of Solid Organ Malignancies.” <em>British Journal of Cancer</em>, 1.</p>
+</div>
+<div id="ref-kourou2015machine">
+<p>Kourou, Konstantina, Themis P Exarchos, Konstantinos P Exarchos, Michalis V Karamouzis, and Dimitrios I Fotiadis. 2015. “Machine Learning Applications in Cancer Prognosis and Prediction.” <em>Computational and Structural Biotechnology Journal</em> 13: 8–17.</p>
+</div>
+<div id="ref-park2013robust">
+<p>Park, Kanghee, Amna Ali, Dokyoon Kim, Yeolwoo An, Minkoo Kim, and Hyunjung Shin. 2013. “Robust Predictive Model for Evaluating Breast Cancer Survivability.” <em>Engineering Applications of Artificial Intelligence</em> 26 (9): 2194–2205.</p>
+</div>
+<div id="ref-silva2015papel">
+<p>Silva, Henrique Alves Pinto, Pietro Mainenti, and Artur Laizo. 2015. “O Papel de Marcadores Tumorais No câncer de Pulmão: Revisão Da Literatura.” <em>Rev. Méd. Minas Gerais</em> 25 (4).</p>
+</div>
+<div id="ref-xu2012gene">
+<p>Xu, Xiaoyi, Ya Zhang, Liang Zou, Minghui Wang, and Ao Li. 2012. “A Gene Signature for Breast Cancer Prognosis Using Support Vector Machine.” In <em>2012 5th International Conference on Biomedical Engineering and Informatics</em>, 928–31. IEEE.</p>
+</div>
+</div>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+<script>
+$(document).ready(function () {
+  window.initializeCodeFolding("hide" === "show");
+});
+</script>
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = false;
+    options.smoothScroll = false;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,94 @@
+---
+title: "Cancer Risk - Research"
+author: "Laura"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output:
+  html_document:
+    code_folding: hide
+    highlight: tango
+    theme: united
+    toc: yes
+    toc_depth: 2
+    toc_float:
+      collapsed: no
+      smooth_scroll: no
+bibliography: ref2.bib
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      comment = NA,
+                      warning = FALSE,
+                      message = FALSE,
+                      cache=TRUE,
+                      fig.path = "Figuras/")
+library(dplyr)
+library(knitr)
+library(kableExtra)
+```
+
+
+
+# Artigos pesquisados
+
+Pesquisei vários artigos , como segue na seção ***Referências***. Todos pesquisados estão contidos nesta seção. Porém abaixo elenquei quatro deles que mostraram ideias importantes sobre a pesquisa de câncer com *machine learning*.
+
+1- [Machine learning applications in cancer prognosis and prediction](https://www.sciencedirect.com/science/article/pii/S2001037014000464) 
+
+  - Neste artigo, @kourou2015machine, apresenta uma pesquisa de recentes aplicações de *machine learning* para modelar a progressão de câncer. É discutido vários tipos de modelos e os tipos de dados em três âmbitos: fatores de risco, recorrência e sobrevivência. Também é discutido o crescimento de pesquisas sobre o tema.
+  
+2- [The Impact of Psychiatric Utilisation Prior to Cancer Diagnosis on Survival of Solid Organ Malignancies](The Impact of Psychiatric Utilisation Prior to Cancer Diagnosis on Survival of Solid Organ Malignancies)
+
+  - Neste artigo, @klaassen2019impact, apresenta um estudo com pacientes de câncer em Ontário, Canadá, que diz que a mortalidade por câncer também é associada a histórico por tratamento por doença mental. Não vejo que podemos cravar doenças psiquiátricas como um fator de risco para a mortalidade em câncer, poiś é um estudo prévio no Canadá, outros estudos devem ser realizados para ter mais confiança porém é um primeiro indício.
+
+3- [Machine-learning prediction of cancer survival: a retrospective study using electronic administrative records and a cancer registry](https://bmjopen.bmj.com/content/4/3/e004007.short)
+
+  - Neste artigo, o autor @gupta2014machine, apresenta um estudo em que o modelo de *machine learning* ajustado utiliza registros eletrônicos sobre o estado de saúde dos pacientes. Tem uma similaridade com a proposta da Laura sobre coleta de informações em tempo real dos pacientes.Interessante estudo.
+  
+4- [Inference of a Multi-Domain Machine Learning Model to Predict Mortality in Hospital Stays for Patients with Cancer upon Febrile Neutropenia Onset](https://arxiv.org/abs/1902.07839)
+
+  - Neste artigo o autor, @du2019inference, usa *machine learning* para predição de mortalidade de câncer e a principal informação que ele ressalta é a alta associação da mortalidade de pacientes adultos com câncer com a **neutropenia febril** que é definida como uma temperatura superior a $38^\circ$C e uma contagem de neutrófilos menor $500/ul$.
+
+>Tabela 1 - Informações relevantes
+
+```{R}
+text_tbl <- data.frame(
+  Informações = c("Cadastrais", "Clínicos e patológicos","Expressão genética", "Dados genômicos","SNPs"),
+  Descrição = c(
+    "Dados com as características demográficas e sócio econômicas dos pacientes.", 
+    "Resultados de exames e medições de sinais vitais. Presença, sintomas e histórico de doenças, tais como doenças psiquiátricas. ",
+	"Processo ais quais a informação contida nos genes é convertida em moléculas que determinam as propriedades da célula, ou seja, é a transferência de informação genética de DNA a proteína.",
+	"São dados especiais que caracterizam pessoas, famílias e até etnias. Informações podem ser extraídas de bases de dados de perfis de DNA.",
+	"*Single nucleotide polymorphisms*, são os tipos mais comuns de variação genética entre pessoas. Cada SNP representa uma diferença em um único bloco de construção do DNA, chamado nucleotídeo."
+  )
+)
+
+kable(text_tbl) %>%
+  kable_styling(full_width = F) %>%
+  column_spec(1, bold = T, border_right = T) %>%
+  column_spec(2, width = "30em", background = "white",color="orangered")
+```
+> Na Tabela 1 há uma visão geral sobre informações que podem ser utilizadas em estudos de mortalidade de câncer. Notei, em geral, são ajustados modelos inferenciais para risco e *machine learning*, para cada tipo de câncer. 
+
+> Portanto na Tabela 2, uma visão das principais informações sobre os três tipos de câncer mais prevalentes na população do Brasil, como divulgado no site oficial do @inca.
+
+>Tabela 2 - Informações relevantes por tipo de câncer
+
+```{R}
+text_tbl <- data.frame(
+  Câncer = c("Próstata", "Mama","Traquéia, brônquio e pulmão"),
+  Features = c("Histórico de câncer de próstata na família, idade do paciente, valor do biomarcador PSA, tempo de diagnóstico do câncer e extensão do tumor", 
+  "Idade do paciente, tempo de diagnóstico do câncer, número de nodos, 50- gene signature, tamanho do tumor, histologia e informações sobre os genes MMP9, HRASLA e RAB27B e local do tumor",
+  "Sexo, idade do paciente, genes LCK e ERBB2 e outros biomarcadores moleculares referentes ao câncer de pulmão")
+)
+
+kable(text_tbl) %>%
+  kable_styling(full_width = F) %>%
+  column_spec(1, bold = T, border_right = T) %>%
+  column_spec(2, width = "30em", background = "white",color="orangered")
+```
+
+- Outros artigos pesquisados: [@ferrer2016joint], [@silva2015papel], [@chen2014risk], [@kim2013breast], [@ahmad2013using], [@park2013robust], [@kim2012development], [@xu2012gene],[@gevaert2006predicting] e [@delen2005predicting].
+
+# Referências
+

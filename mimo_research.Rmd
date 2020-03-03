@@ -1,0 +1,98 @@
+---
+title: "Mortality of pregnants and newborns  - Research"
+author: "Laura"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output:
+  html_document:
+    code_folding: hide
+    highlight: tango
+    theme: united
+    toc: yes
+    toc_depth: 2
+    toc_float:
+      collapsed: no
+      smooth_scroll: no
+bibliography: ref1.bib
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      comment = NA,
+                      warning = FALSE,
+                      message = FALSE,
+                      cache=TRUE,
+                      fig.path = "Figuras/")
+library(dplyr)
+library(knitr)
+library(kableExtra)
+```
+
+
+
+# Artigos pesquisados
+
+Pesquisei vários artigos e a lista de todos os pesquisados está contida na seção ***Referências***. Porém abaixo elenquei quatro deles que mostraram ideias importantes sobre a pesquisa de mortalidade de gestantes e recém nascidos com *machine learning*.
+
+1- [Biomedical data analytics in mobile-health environments for high-risk pregnancy outcome prediction](https://link.springer.com/article/10.1007/s12652-019-01230-4)
+
+  - Neste artigo, o autor @moreira2019biomedical, mostra uma proposta muito similar ao que fazemos na Laura. Um aplicativo para *mobile* que usa *machine learning* com o intuito monitirar e fazer predições sobre situações de risco durante a gestação. Ele ressalta a importância das desordens de hipertensão na mortalidade de gestantes, *Hypertensive disease of pregnancy*. O modelo de machine learning usado pelos autores, é uma rede bayesiana e fazem também a comparação com outros modelos. ***Vale muito a pena a leitura deste artigo***.
+  
+2- [Maternal mortality of women with opioid-use during pregnancy in England:investigating bias in a cohort of linked mother-baby hospital records](https://ijpds.org/article/view/895)
+
+  - Neste artigo, o autor @blackburn2018maternal, levanta a relevância sobre a adicção por opióides e opiáceos ser um problema de saúde pública e ser a maior causa de mortalidade por uso de drogas. É feita uma comparação de todas as causas de mortalidade de gestantes com abstinência e sem abstinência e estimaram a o risco de morte das gestantes relacionando com informações dos nascidos vivos. Pode se adaptar informações de uso de drogas de acordo com a realidade do Brasil pois sabe-se que o consumo de opióides e opiáceos não são tão comuns com outras drogas no Brasil. Porém ainda percebo muitas limitações para utilizar tais informações.
+
+3- [Association Between Vitamin D Supplementation During Pregnancy and Offspring Growth, Morbidity, and Mortality](https://jamanetwork.com/journals/jamapediatrics/article-abstract/2681636)
+
+  - Neste estudo, o autor @bi2018association, discorre sobre a associação da suplementação de vitamina D, durante a gestação, diminuir o risco de mortalidade para o feto. Porém, vejo como um estudo com varias limitações, mas pode-se pensar em coletar tal dado e testar sua significância em modelos de predição da mortalidade neonatal.
+  
+4- [Comparison of logistic regression with machine learning methods for the prediction of fetal growth abnormalities: a retrospective cohort study](https://bmcpregnancychildbirth.biomedcentral.com/articles/10.1186/s12884-018-1971-2)
+
+  - Neste estudo, o autor @kuhle2018comparison, o autor faz uma comparação de alguns modelos de *machine learning* com a Regressão logística. Nada inovador porém selecionei este artigo pois ele dá uma boa lista de preditores importantes para anomalias no crescimento fetal que podem ser úteis para predição da mortalidade da gestante e do bebê.
+
+> Abaixo outros estudos relevantes
+
+5- Além dos artigos mencionados e e pesquisados, há pesquisas que indicam que é importante para os profissionais da área de epidemiologia mensurar os efeitos espaciais que atuam sobre eventos de saúde pública como mortalidade de gestantes e infantil. A abordagem determina a identificação de áreas com maior ou menor risco uma vez que é comprovado que a localização espacial dos eventos influencia a mortalidade. Duas boas referências são @shimakura2001distribuiccao e @barlettaTCC
+
+  - [Fatores de risco e distribuição espacial do risco para a mortalidade infantil em Curitiba, Brasil](http://www.leg.ufpr.br/lib/exe/fetch.php/projetos:tcc_versao_final1.pdf)
+  
+  - [Distribuição espacial do risco: modelagem da mortalidade infantil em Porto Alegre, Rio Grande do Sul, Brasil](https://www.scielosp.org/article/csp/2001.v17n5/1251-1261/pt/)
+  
+6- Outra importante informação é a grande quantidade de estudos sobre mortalidade com a abordagem espacial por meio da Inferência Bayesiana. Muitos trabalhos publicados o que mostra a maior eficácia desta abordagem para a modelagem de mortalidade levando em consideração tempo e espaço em que os eventos ocorreram. Alguns autores publicaram estudos com tais abordagens, @krainski2018advanced, @khana2018bayesian, @loquiha2018mapping, @blangiardo2015spatial, @musenge2013bayesian.
+
+  - [Advanced Spatial Modeling with Stochastic Partial Differential Equations Using R and INLA](https://www.taylorfrancis.com/books/9780429629853)
+  
+  - [A Bayesian spatial and temporal modeling approach to mapping geographic variation in mortality rates for subnational areas with R-INLA](A Bayesian spatial and temporal modeling approach to mapping geographic variation in mortality rates for subnational areas with R-INLA)
+  
+  - [Mapping maternal mortality rate via spatial zero-inflated models for count data: A case study of facility-based maternal deaths from Mozambique](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0202186) 
+  
+  - [Spatial and spatio-temporal Bayesian models with R-INLA](https://books.google.com.br/books?hl=en&lr=&id=--HuBgAAQBAJ&oi=fnd&pg=PA259&dq=Spatial+and+spatio-temporal+Bayesian+models+with+R-INLA&ots=VTEBD3sgRX&sig=2rfXYJJDy7qUNsJPRgUdGGV8WC8&redir_esc=y#v=onepage&q=Spatial%20and%20spatio-temporal%20Bayesian%20models%20with%20R-INLA&f=false)
+  
+  - [Bayesian analysis of zero inflated spatiotemporal HIV/TB child mortality data through the INLA and SPDE approaches: Applied to data observed between 1992 and 2010 in rural North East South Africa](https://www.sciencedirect.com/science/article/pii/S0303243412000645)
+  
+>Tabela 1 - Informações relevantes
+
+```{R}
+text_tbl <- data.frame(
+  Informações = c("Cadastrais - possíveis fatores de risco", "Espaço-temporal","Sintomas antes do internamento","Sintomas durante a gestação","Identificação de desordem hipertensiva"),
+  Descrição = c(
+    "Idade da gestante, idade gestacional, histórico familiar de pré-eclampsia, tipo de parto, escolaridade da mãe, quantidade de filhos vivos e mortos, quantidade de gestação e intervalo entre as gestações, nova paternidade, peso da gestante, peso ao nascer da criança, sexo da criança, momento da menarca, uso de drogas lícita ou ilícitas, hábitos de vidas (tabagismo e alcoolismo),características biológicas e químicas, condições de exposição a ocupação de stress e esforço físico, já teve aborto ou não e histórico reprodutivo (morte perinatal, recém-nascido com má formação, esterilidade/infertilidade, etc).", 
+    "Localização espacial do evento (latitude e longitude) e tempo que levou para ocorrer o evento. ",
+	"Obesidade, diabetes e qual tipo, hemorragia, hipertensão, enxaqueca, tendência em trombofilia, doenças autoimunes - esclerodermia, lúpus, reumatoide e artrite, doenças infecciosas, pneumonia, neoplasia, etc.",
+	"Hipertensão, desordem cardíaca, pneumonia, proteinúria, diagnóstico de HELLP, enxaqueca, náusea ou vômito, edema, dor epigástrica, hiperreflexia, visão turva e tontura.",
+	"identificação de desordem hipertensiva pré-existente, durante gestação e período puerpério e eclampsia")
+)
+
+kable(text_tbl) %>%
+  kable_styling(full_width = F) %>%
+  column_spec(1, bold = T, border_right = T) %>%
+  column_spec(2, width = "30em", background = "white",color="orangered")
+```
+
+> Na Tabela 1 há uma visão geral sobre informações que podem ser utilizadas em estudos de mortalidade de gestantes e recém nascidos. Os estudos mais recentes e de vanguarda sobre estes temas unem técnicas de *machine learning*  com abordagem bayesiana espaço-temporal.
+
+- Outros artigos pesquisados: [@rodriguez2016early].
+
+-  **HELLP**, é definida como uma síndrome. Condição laboratorial determinada por três sinais vitais: hemólise, baixa contagem de plaquetas e elevação das enzimas hepáticas.
+
+# Referências
+

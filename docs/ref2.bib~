@@ -1,0 +1,147 @@
+@article{kourou2015machine,
+  title={Machine learning applications in cancer prognosis and prediction},
+  author={Kourou, Konstantina and Exarchos, Themis P and Exarchos, Konstantinos P and Karamouzis, Michalis V and Fotiadis, Dimitrios I},
+  journal={Computational and structural biotechnology journal},
+  volume={13},
+  pages={8--17},
+  year={2015},
+  publisher={Elsevier}
+}
+
+@article{klaassen2019impact,
+  title={The impact of psychiatric utilisation prior to cancer diagnosis on survival of solid organ malignancies},
+  author={Klaassen, Zachary and Wallis, Christopher JD and Goldberg, Hanan and Chandrasekar, Thenappan and Sayyid, Rashid K and Williams, Stephen B and Moses, Kelvin A and Terris, Martha K and Nam, Robert K and Urbach, David and others},
+  journal={British journal of cancer},
+  pages={1},
+  year={2019},
+  publisher={Nature Publishing Group}
+}
+
+@article{rose2013mortality,
+  title={Mortality risk score prediction in an elderly population using machine learning},
+  author={Rose, Sherri},
+  journal={American journal of epidemiology},
+  volume={177},
+  number={5},
+  pages={443--452},
+  year={2013},
+  publisher={Oxford University Press}
+}
+
+@online{inca,
+author = {Instituto nacional de câncer INCA},
+title = {Estatísticas de câncer},
+month = Novembro,
+year = {2018},
+url = {https://www.inca.gov.br/numeros-de-cancer}
+}
+
+@article{silva2015papel,
+  title={O papel de marcadores tumorais no c{\^a}ncer de pulm{\~a}o: revis{\~a}o da literatura},
+  author={Silva, Henrique Alves Pinto and Mainenti, Pietro and Laizo, Artur},
+  journal={Rev. m{\'e}d. Minas Gerais},
+  volume={25},
+  number={4},
+  year={2015}
+}
+
+@article{kim2012development,
+  title={Development of novel breast cancer recurrence prediction model using support vector machine},
+  author={Kim, Woojae and Kim, Ku Sang and Lee, Jeong Eon and Noh, Dong-Young and Kim, Sung-Won and Jung, Yong Sik and Park, Man Young and Park, Rae Woong},
+  journal={Journal of breast cancer},
+  volume={15},
+  number={2},
+  pages={230--238},
+  year={2012}
+}
+
+@article{ahmad2013using,
+  title={Using three machine learning techniques for predicting breast cancer recurrence},
+  author={Ahmad, L Gh and Eshlaghy, AT and Poorebrahimi, A and Ebrahimi, M and Razavi, AR and others},
+  journal={J Health Med Inform},
+  volume={4},
+  number={124},
+  pages={3},
+  year={2013}
+}
+
+@article{chen2014risk,
+  title={Risk classification of cancer survival using ANN with gene expression data from multiple laboratories},
+  author={Chen, Yen-Chen and Ke, Wan-Chi and Chiu, Hung-Wen},
+  journal={Computers in biology and medicine},
+  volume={48},
+  pages={1--7},
+  year={2014},
+  publisher={Elsevier}
+}
+
+@article{park2013robust,
+  title={Robust predictive model for evaluating breast cancer survivability},
+  author={Park, Kanghee and Ali, Amna and Kim, Dokyoon and An, Yeolwoo and Kim, Minkoo and Shin, Hyunjung},
+  journal={Engineering Applications of Artificial Intelligence},
+  volume={26},
+  number={9},
+  pages={2194--2205},
+  year={2013},
+  publisher={Elsevier}
+}
+
+@inproceedings{xu2012gene,
+  title={A gene signature for breast cancer prognosis using support vector machine},
+  author={Xu, Xiaoyi and Zhang, Ya and Zou, Liang and Wang, Minghui and Li, Ao},
+  booktitle={2012 5th International Conference on BioMedical Engineering and Informatics},
+  pages={928--931},
+  year={2012},
+  organization={IEEE}
+}
+
+@article{gevaert2006predicting,
+  title={Predicting the prognosis of breast cancer by integrating clinical and microarray data with Bayesian networks},
+  author={Gevaert, Olivier and Smet, Frank De and Timmerman, Dirk and Moreau, Yves and Moor, Bart De},
+  journal={Bioinformatics},
+  volume={22},
+  number={14},
+  pages={e184--e190},
+  year={2006},
+  publisher={Oxford University Press}
+}
+
+@article{delen2005predicting,
+  title={Predicting breast cancer survivability: a comparison of three data mining methods},
+  author={Delen, Dursun and Walker, Glenn and Kadam, Amit},
+  journal={Artificial intelligence in medicine},
+  volume={34},
+  number={2},
+  pages={113--127},
+  year={2005},
+  publisher={Elsevier}
+}
+
+@article{kim2013breast,
+  title={Breast cancer survivability prediction using labeled, unlabeled, and pseudo-labeled patient data},
+  author={Kim, Juhyeon and Shin, Hyunjung},
+  journal={Journal of the American Medical Informatics Association},
+  volume={20},
+  number={4},
+  pages={613--618},
+  year={2013},
+  publisher={BMJ Publishing Group BMA House, Tavistock Square, London, WC1H 9JR}
+}
+
+@article{ferrer2016joint,
+  title={Joint modelling of longitudinal and multi-state processes: application to clinical progressions in prostate cancer},
+  author={Ferrer, Lo{\"\i}c and Rondeau, Virginie and Dignam, James and Pickles, Tom and Jacqmin-Gadda, H{\'e}l{\`e}ne and Proust-Lima, C{\'e}cile},
+  journal={Statistics in medicine},
+  volume={35},
+  number={22},
+  pages={3933--3948},
+  year={2016},
+  publisher={Wiley Online Library}
+}
+
+@article{du2019inference,
+  title={Inference of a Multi-Domain Machine Learning Model to Predict Mortality in Hospital Stays for Patients with Cancer upon Febrile Neutropenia Onset},
+  author={Du, Xinsong and Min, Jae and Lemas, Dominick J and Prosperi, Mattia},
+  journal={arXiv preprint arXiv:1902.07839},
+  year={2019}
+}

@@ -1,0 +1,21 @@
+---
+title: "Felipe Barletta - Pesquisas Laura::ciência de dados"
+output:
+  html_document:
+    highlight: tango
+    theme: united
+---
+
+
+
+<div class="alert alert-danger" role="alert">
+**Pesquisa sobre mortlidade de gestantes, recém-nascidos, prematuros e mortlidade por câncer.**
+
+Algumas considerações
+
+- **Pesquisa sobre mortalidade por câncer:** É um campo de pesquisa bastante evoluído. Muitos estudos sobre a mortalidade de câncer com tradicionais e avançados algoritmos de *machine learning*. O mais atual benefício em pesquisas é o uso de informações genômicas e de imagem com aplicação de *deep learning*.
+- **Pesquisa sobre mortalidade de gestantes e recém-nascidos:** Muitas pesquisas novas, promissoras e com resultados relevantes por meio de inferência bayesiana com o [INLA](http://www.r-inla.org/). 
+- **Pesquisa sobre mortalidade de prematuros:** Tema com poucas pesqusas com foco na predição da mortalidade. Maioria das pesquisas tem o objetivo de predizer o evento da prematuridade para prevenção. Um ótimo tema fértil a ser exploração. O lançamento de produtos com *machine learning* para predição da mortalidade é uma oportunidade para inovação por parte da ***Laura***.
+</div>
+
+<img src="laura.png" style="float:left;top:0px;left:0px" />

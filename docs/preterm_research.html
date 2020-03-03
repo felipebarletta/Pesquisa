@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+<meta name="author" content="Laura" />
+
+
+<title>Mortality of preterms - Research</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/united.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<script src="site_libs/navigation-1.1/codefolding.js"></script>
+<script src="site_libs/kePrint-0.0.1/kePrint.js"></script>
+
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css" data-origin="pandoc">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  { background-color: #f8f8f8; }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ef2929; } /* Alert */
+code span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #c4a000; } /* Attribute */
+code span.bn { color: #0000cf; } /* BaseN */
+code span.cf { color: #204a87; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4e9a06; } /* Char */
+code span.cn { color: #000000; } /* Constant */
+code span.co { color: #8f5902; font-style: italic; } /* Comment */
+code span.cv { color: #8f5902; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #8f5902; font-weight: bold; font-style: italic; } /* Documentation */
+code span.dt { color: #204a87; } /* DataType */
+code span.dv { color: #0000cf; } /* DecVal */
+code span.er { color: #a40000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #0000cf; } /* Float */
+code span.fu { color: #000000; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #204a87; font-weight: bold; } /* Keyword */
+code span.op { color: #ce5c00; font-weight: bold; } /* Operator */
+code span.ot { color: #8f5902; } /* Other */
+code span.pp { color: #8f5902; font-style: italic; } /* Preprocessor */
+code span.sc { color: #000000; } /* SpecialChar */
+code span.ss { color: #4e9a06; } /* SpecialString */
+code span.st { color: #4e9a06; } /* String */
+code span.va { color: #000000; } /* Variable */
+code span.vs { color: #4e9a06; } /* VerbatimString */
+code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
+
+.sourceCode .row {
+  width: 100%;
+}
+.sourceCode {
+  overflow-x: auto;
+}
+.code-folding-btn {
+  margin-right: -30px;
+}
+</style>
+<script>
+// apply pandoc div.sourceCode style to pre.sourceCode instead
+(function() {
+  var sheets = document.styleSheets;
+  for (var i = 0; i < sheets.length; i++) {
+    if (sheets[i].ownerNode.dataset["origin"] !== "pandoc") continue;
+    try { var rules = sheets[i].cssRules; } catch (e) { continue; }
+    for (var j = 0; j < rules.length; j++) {
+      var rule = rules[j];
+      // check if there is a div.sourceCode rule
+      if (rule.type !== rule.STYLE_RULE || rule.selectorText !== "div.sourceCode") continue;
+      var style = rule.style.cssText;
+      // check if color or background-color is set
+      if (rule.style.color === '' && rule.style.backgroundColor === '') continue;
+      // replace div.sourceCode by a pre.sourceCode rule
+      sheets[i].deleteRule(j);
+      sheets[i].insertRule('pre.sourceCode{' + style + '}', j);
+    }
+  }
+})();
+</script>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+<style type="text/css">
+.code-folding-btn { margin-bottom: 4px; }
+</style>
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+.tocify-subheader {
+  display: inline;
+}
+.tocify-subheader .tocify-item {
+  font-size: 0.95em;
+}
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">LAURA</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li>
+  <a href="cancer_risk_research.html">Mortalidade de câncer</a>
+</li>
+<li>
+  <a href="mimo_research.html">Mortalidade de gestantes e recém-nascidos</a>
+</li>
+<li>
+  <a href="preterm_research.html">Mortalidade de prematuros</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+<div class="btn-group pull-right">
+<button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Code</span> <span class="caret"></span></button>
+<ul class="dropdown-menu" style="min-width: 50px;">
+<li><a id="rmd-show-all-code" href="#">Show All Code</a></li>
+<li><a id="rmd-hide-all-code" href="#">Hide All Code</a></li>
+</ul>
+</div>
+
+
+
+<h1 class="title toc-ignore">Mortality of preterms - Research</h1>
+<h4 class="author">Laura</h4>
+<h4 class="date">03 março, 2020</h4>
+
+</div>
+
+
+<div id="artigos-pesquisados" class="section level1">
+<h1>Artigos pesquisados</h1>
+<p>Pesquisei vários artigos e a lista de todos os pesquisados está contida na seção <strong><em>Referências</em></strong>. Porém abaixo elenquei três deles que mostraram ideias importantes sobre a pesquisa de mortalidade de gestantes e recém nascidos com <em>machine learning</em>.</p>
+<p>1- <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0198919">Improving preterm newborn identification in low-resource settings with machine learning</a></p>
+<ul>
+<li>Neste artigo, o autor <span class="citation">Rittenhouse et al. (2019)</span>, ressalta a relevância dos nascimentos prematuros em relaçãoa mortalidade neonatal, principalmente em países de baixa renda. A proposta do artigo é ajustar um modelo de <em>machine learning</em> combinando informações da idade gestacional com características dos prematuros e das mães para predição dos nascimentos prematuros. Uma limitação deste estudo é que foi aplicado em dados do país africano Zambia e não para a predição de mortalidade dos prematuros, porém dá bons indpicios de informações que podem ser usadas nos modelos da <strong><em>Laura</em></strong> para ao tema referido.</li>
+</ul>
+<p>2- <a href="https://jamanetwork.com/journals/jama/fullarticle/2434683">Trends in Care Practices, Morbidity, and Mortality of Extremely Preterm Neonates, 1993-2012</a></p>
+<ul>
+<li>Neste artigo, o autor <span class="citation">Stoll et al. (2015)</span>, faz um estudo retrospectivo (coorte) para avaliar se ao longo do tempo - entre 1993 e 2012 - as mudanças em cuidados aos prematuros ajudou a diminuir a mortalidade e morbidade em prematuros neonatal nascidos no <em>Neonatal Research Network centers</em> nos Estados Unidos. Limitação de ser um estudo com perfil do público americano que é diferente ao brasileiro, porém dá bons indícios de informações a serem usadas nos modelos da <strong><em>Laura</em></strong> para ao tema referido.</li>
+</ul>
+<p>3- <a href="https://fn.bmj.com/content/79/2/F129.abstract">Artificial neural network for risk assessment in preterm neonates</a></p>
+<ul>
+<li>Neste estudo, o autor <span class="citation">Zernikow et al. (1998)</span> , compara um modelo de rede neural versus um de regressão logística para predição de mortalidade de prematuros. Apsesar de ser um estudo antigo, de 1998, pode auxiliar bastante em definir informações a serem usadas pois é um dos poucos estudos com <em>machine learning</em> tendo como principal objetivo de predizer o óbito de prematuros.</li>
+</ul>
+<blockquote>
+<p>Uma abordagem bayesiana com o <em>INLA</em> pode ser investigada também para os modelo da <strong><em>LAURA</em></strong> para prematuros. Portanto, as referências bayesianas usadas na pesquisa sobre gestantes e recém nascidos podem ser apreciadas neste contexto também.</p>
+</blockquote>
+<blockquote>
+<p>Tabela 1 - Informações relevantes</p>
+</blockquote>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" title="1">text_tbl &lt;-<span class="st"> </span><span class="kw">data.frame</span>(</a>
+<a class="sourceLine" id="cb1-2" title="2">  Informaçõ<span class="dt">es =</span> <span class="kw">c</span>(<span class="st">&quot;Cadastrais&quot;</span>, <span class="st">&quot;Dados de internamento&quot;</span>),</a>
+<a class="sourceLine" id="cb1-3" title="3">  Descriçã<span class="dt">o =</span> <span class="kw">c</span>(</a>
+<a class="sourceLine" id="cb1-4" title="4">    <span class="st">&quot;Idade da gestante, idade gestacional, gestação com gêmeos, escolaridade da mãe, quantidade de filhos vivos e mortos, peso ao nascer do prematuro, sexo da criança, tempo de vida do prematuro, infecção maternal com HIV.&quot;</span>, </a>
+<a class="sourceLine" id="cb1-5" title="5">    <span class="st">&quot;Apgar, sinais vitais (temperatura, PH, etc), Tipo de emergência no internamento, alguma má formação congênita, houve ou não ventilação no transporte, intubação do prematuro e tempo de intubação, presença de alguma doença e com ncecessidade de cirurgia e tratamento com antibiótico, presença de doença respiratória e algm tipo de infecção. &quot;</span></a>
+<a class="sourceLine" id="cb1-6" title="6">    )</a>
+<a class="sourceLine" id="cb1-7" title="7">)</a>
+<a class="sourceLine" id="cb1-8" title="8"></a>
+<a class="sourceLine" id="cb1-9" title="9"><span class="kw">kable</span>(text_tbl) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb1-10" title="10"><span class="st">  </span><span class="kw">kable_styling</span>(<span class="dt">full_width =</span> F) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb1-11" title="11"><span class="st">  </span><span class="kw">column_spec</span>(<span class="dv">1</span>, <span class="dt">bold =</span> T, <span class="dt">border_right =</span> T) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb1-12" title="12"><span class="st">  </span><span class="kw">column_spec</span>(<span class="dv">2</span>, <span class="dt">width =</span> <span class="st">&quot;30em&quot;</span>, <span class="dt">background =</span> <span class="st">&quot;white&quot;</span>,<span class="dt">color=</span><span class="st">&quot;orangered&quot;</span>)</a></code></pre></div>
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Informações
+</th>
+<th style="text-align:left;">
+Descrição
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+Cadastrais
+</td>
+<td style="text-align:left;width: 30em; color: orangered !important;background-color: white !important;">
+Idade da gestante, idade gestacional, gestação com gêmeos, escolaridade da mãe, quantidade de filhos vivos e mortos, peso ao nascer do prematuro, sexo da criança, tempo de vida do prematuro, infecção maternal com HIV.
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+Dados de internamento
+</td>
+<td style="text-align:left;width: 30em; color: orangered !important;background-color: white !important;">
+Apgar, sinais vitais (temperatura, PH, etc), Tipo de emergência no internamento, alguma má formação congênita, houve ou não ventilação no transporte, intubação do prematuro e tempo de intubação, presença de alguma doença e com ncecessidade de cirurgia e tratamento com antibiótico, presença de doença respiratória e algm tipo de infecção.
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Na Tabela 1 há uma visão geral sobre informações que podem ser utilizadas em estudos de mortalidade de prematuros. A grande maioria dos estudos sobre prematuros, tem como principal foco predizer o nascimento do prematuro para a prevenção do evento. Ainda há poucos estudos na literatura que tem como principal objetivo predizer a mortalidade do prematuro uma vez que eeste evento já ocorreu.</p>
+</blockquote>
+<ul>
+<li>Outros artigos pesquisados: <span class="citation">(Kramer et al. 2000)</span>, <span class="citation">(Saria et al. 2010)</span>, <span class="citation">(Van Dyne et al. 1994)</span>, <span class="citation">(Chen et al. 2011)</span></li>
+</ul>
+</div>
+<div id="referências" class="section level1 unnumbered">
+<h1>Referências</h1>
+<div id="refs" class="references">
+<div id="ref-chen2011exploring">
+<p>Chen, Hsiang-Yang, Chao-Hua Chuang, Yao-Jung Yang, and Tung-Pi Wu. 2011. “Exploring the Risk Factors of Preterm Birth Using Data Mining.” <em>Expert Systems with Applications</em> 38 (5): 5384–7.</p>
+</div>
+<div id="ref-kramer2000contribution">
+<p>Kramer, Michael S, Kitaw Demissie, Hong Yang, Robert W Platt, Reg Sauvé, Robert Liston, Fetal, Infant Health Study Group of the Canadian Perinatal Surveillance System, and others. 2000. “The Contribution of Mild and Moderate Preterm Birth to Infant Mortality.” <em>Jama</em> 284 (7): 843–49.</p>
+</div>
+<div id="ref-rittenhouse2019improving">
+<p>Rittenhouse, Katelyn J, Bellington Vwalika, Alexander Keil, Jennifer Winston, Marie Stoner, Joan T Price, Monica Kapasa, et al. 2019. “Improving Preterm Newborn Identification in Low-Resource Settings with Machine Learning.” <em>PloS One</em> 14 (2): e0198919.</p>
+</div>
+<div id="ref-saria2010integration">
+<p>Saria, Suchi, Anand K Rajani, Jeffrey Gould, Daphne Koller, and Anna A Penn. 2010. “Integration of Early Physiological Responses Predicts Later Illness Severity in Preterm Infants.” <em>Science Translational Medicine</em> 2 (48): 48ra65–48ra65.</p>
+</div>
+<div id="ref-stoll2015trends">
+<p>Stoll, Barbara J, Nellie I Hansen, Edward F Bell, Michele C Walsh, Waldemar A Carlo, Seetha Shankaran, Abbot R Laptook, et al. 2015. “Trends in Care Practices, Morbidity, and Mortality of Extremely Preterm Neonates, 1993-2012.” <em>Jama</em> 314 (10): 1039–51.</p>
+</div>
+<div id="ref-van1994using">
+<p>Van Dyne, MM, LK Woolery, J Gryzmala-Busse, and C Tsatsoulis. 1994. “Using Machine Learning and Expert Systems to Predict Preterm Delivery in Pregnant Women.” In <em>Proceedings of the Tenth Conference on Artificial Intelligence for Applications</em>, 344–50. IEEE.</p>
+</div>
+<div id="ref-zernikow1998artificial">
+<p>Zernikow, B, K Holtmannspoetter, E Michel, W Pielemeier, F Hornschuh, A Westermann, and KH Hennecke. 1998. “Artificial Neural Network for Risk Assessment in Preterm Neonates.” <em>Archives of Disease in Childhood-Fetal and Neonatal Edition</em> 79 (2): F129–F134.</p>
+</div>
+</div>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+<script>
+$(document).ready(function () {
+  window.initializeCodeFolding("hide" === "show");
+});
+</script>
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = false;
+    options.smoothScroll = false;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

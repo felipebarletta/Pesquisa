@@ -1,0 +1,20 @@
+name: "Pesquisas - 2019"
+output_dir: "docs"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    code_folding: show
+    theme: cosmo
+navbar:
+  title: "LAURA"
+  left:
+    - text: "Home"
+      href: index.html
+    - text: "Mortalidade de câncer"
+      href: cancer_risk_research.html
+    - text: "Mortalidade de gestantes e recém-nascidos"
+      href: mimo_research.html
+    - text: "Mortalidade de prematuros"
+      href: preterm_research.html
+      
